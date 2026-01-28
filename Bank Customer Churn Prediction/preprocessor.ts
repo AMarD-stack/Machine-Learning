@@ -72,7 +72,7 @@ export class DataPreprocessor {
       const genderEncoded = this.df.column('Gender').map((val: any) => genderMap[val as keyof typeof genderMap] ?? 0);
       this.df.addColumn('Gender_Encoded', genderEncoded);
       this.df = this.df.drop({ columns: ['Gender'] });
-      console.log('   ✓ Gender encoded (Male=1, Female=0)');
+      console.log(' Gender encoded (Male=1, Female=0)');
     }
 
     // 2. One-hot encode Geography
@@ -97,7 +97,7 @@ export class DataPreprocessor {
       });
       
       this.df = this.df.drop({ columns: ['Card Type'] });
-      console.log(`    Card Type one-hot encoded (${cardDummies.columns.length} columns)`);
+      console.log(` Card Type one-hot encoded (${cardDummies.columns.length} columns)`);
     }
 
     console.log(` Shape after encoding: ${this.df.shape[0]} rows × ${this.df.shape[1]} columns`);
@@ -113,14 +113,14 @@ export class DataPreprocessor {
     if (this.df.columns.includes('Tenure') && this.df.columns.includes('Age')) {
       const tenureAgeRatio = this.df.column('Tenure').div(this.df.column('Age'));
       this.df.addColumn('Tenure_Age_Ratio', tenureAgeRatio);
-      console.log('   ✓ Created: Tenure_Age_Ratio');
+      console.log(' Created: Tenure_Age_Ratio');
     }
 
     // 2. Balance per Product (average balance per product)
     if (this.df.columns.includes('Balance') && this.df.columns.includes('NumOfProducts')) {
       const balancePerProduct = this.df.column('Balance').div(this.df.column('NumOfProducts').add(1)); // +1 to avoid division by zero
       this.df.addColumn('Balance_Per_Product', balancePerProduct);
-      console.log('   ✓ Created: Balance_Per_Product');
+      console.log(' Created: Balance_Per_Product');
     }
 
     // 3. Credit Score Category (categorize credit scores)
@@ -146,7 +146,7 @@ export class DataPreprocessor {
       console.log('Created: Age_Group');
     }
 
-    console.log(` Total features now: ${this.df.shape[1]} columns`);
+    console.log(`Total features now: ${this.df.shape[1]} columns`);
   }
 
   /**
