@@ -5,7 +5,7 @@ An end-to-end machine learning system built with TypeScript and TensorFlow.js to
 Predicts bank customer churn using deep learning, enabling proactive retention strategies. The project demonstrates the complete ML lifecycle from data collection through model deployment.
 
 ### Key Achievement
-Discovered and resolved **critical data leakage** where the "Complain" feature had 99.5% correlation with churn, reducing inflated 99% accuracy to a realistic 56% predictive model using only pre-churn demographic data.
+Discovered and resolved **critical data leakage**  reducing inflated 99% accuracy to a realistic 56% predictive model using only pre-churn demographic data.
 
 ## Results
 - **Accuracy:** 56% (realistic performance without leakage)
