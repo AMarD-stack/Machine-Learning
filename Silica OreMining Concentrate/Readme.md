@@ -2,7 +2,7 @@
 
 **Goal :  Predict "% Silica Concentrate"**
 
-**Project Status : OnHold - Reviewed** HEX
+**Project Status : OnHold - Reviewed** 
 
 **Key Findings :
 
