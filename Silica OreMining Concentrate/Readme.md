@@ -2,7 +2,7 @@
 
 **Goal :  Predict "% Silica Concentrate"**
 
-**Project Status : OnHold - Reviewed**
+**Project Status : OnHold - Reviewed** HEX
 
 **Key Findings :
 
@@ -91,7 +91,7 @@ ENSEMBLE PERFORMANCE:
    Feature importance saved
 
 [7/7] Generating Visualizations...
-Report saved: mining_tree_ensemble_report.png
+>Report saved: mining_tree_ensemble_report.png
 <img width="2982" height="1781" alt="mining_tree_ensemble_report" src="https://github.com/user-attachments/assets/c3b8a69c-01a6-40a8-afd4-8d39847808ff" />
 
 
